@@ -40,3 +40,45 @@ F:\visual studio 2013\Comication\Comication\obj\ARM\Debug\qualifiers.txt
 F:\visual studio 2013\Comication\Comication\obj\ARM\Debug\qualifiers.txt.intermediate
 F:\visual studio 2013\Comication\Comication\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 F:\visual studio 2013\Comication\Comication\obj\ARM\Debug\ProjectArchitectures.txt
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\App.xbf
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\MainPage.xbf
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Comication.xr.xml
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Comication.exe
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Comication.pdb
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\resources.pri
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\AppxManifest.xml
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Comication.build.appxrecipe
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Lumia.Imaging.Managed.dll
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Lumia.Imaging.winmd
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Lumia.InteropServices.WindowsRuntime.winmd
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Lumia.Imaging.Managed.xml
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Lumia.Imaging.dll
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Lumia.Imaging.xml
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Lumia.InteropServices.WindowsRuntime.dll
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Lumia.InteropServices.WindowsRuntime.xml
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\Comication.csprojResolveAssemblyReference.cache
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\App.g.i.cs
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\App.g.cs
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\MainPage.g.i.cs
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\MainPage.g.cs
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\XamlTypeInfo.g.cs
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\App.xaml
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\MainPage.xaml
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\App.xbf
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\MainPage.xbf
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\XamlSaveStateFile.xml
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\Comication.exe
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\Comication.pdb
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\Comication.csproj.GenerateResource.Cache
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\priconfig.xml
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\priconfig.xml.intermediate
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\layout.resfiles
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\layout.resfiles.intermediate
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\resources.resfiles
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\resources.resfiles.intermediate
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\pri.resfiles
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\pri.resfiles.intermediate
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\qualifiers.txt
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\qualifiers.txt.intermediate
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\ProjectArchitectures.txt

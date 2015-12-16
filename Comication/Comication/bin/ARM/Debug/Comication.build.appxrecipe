@@ -7,67 +7,70 @@
     <SolutionConfiguration>Debug|ARM</SolutionConfiguration>
     <PackageArchitecture>arm</PackageArchitecture>
     <PackageIdentityName>5f9deeb4-2d09-4c8a-bb08-3efe286d3fa2</PackageIdentityName>
-    <IntermediateOutputPath>F:\visual studio 2013\Comication\Comication\obj\ARM\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="F:\visual studio 2013\Comication\Comication\bin\ARM\Debug\AppxManifest.xml">
+    <AppXManifest Include="F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\bin\ARM\Debug\Comication.exe">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Comication.exe">
       <PackagePath>Comication.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\\..\..\lib\wpa81-hidden\ARM\Lumia.Imaging.Managed.dll">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\\..\..\lib\wpa81-hidden\ARM\Lumia.Imaging.Managed.dll">
       <PackagePath>Lumia.Imaging.Managed.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\..\..\lib\wpa81\ARM\Lumia.Imaging.dll">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\..\..\lib\wpa81\ARM\Lumia.Imaging.dll">
       <PackagePath>Lumia.Imaging.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\..\..\lib\wpa81\ARM\Lumia.InteropServices.WindowsRuntime.dll">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\..\..\lib\wpa81\ARM\Lumia.InteropServices.WindowsRuntime.dll">
       <PackagePath>Lumia.InteropServices.WindowsRuntime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\\..\..\lib\wpa81\ARM\Lumia.Imaging.winmd">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\\..\..\lib\wpa81\ARM\Lumia.Imaging.winmd">
       <PackagePath>Lumia.Imaging.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\\..\..\lib\wpa81\ARM\Lumia.InteropServices.WindowsRuntime.winmd">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\packages\LumiaImagingSDK.2.0.208\build\wpa81\\..\..\lib\wpa81\ARM\Lumia.InteropServices.WindowsRuntime.winmd">
       <PackagePath>Lumia.InteropServices.WindowsRuntime.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\Assets\Logo.scale-240.png">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\Assets\SmallLogo.scale-240.png">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\Assets\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\Assets\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\Assets\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\Assets\WideLogo.scale-240.png">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\bin\ARM\Debug\App.xbf">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\StoreManifest.xml">
+      <PackagePath>StoreManifest.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\bin\ARM\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\bin\ARM\Debug\Comication.xr.xml">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Comication.xr.xml">
       <PackagePath>Comication.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\visual studio 2013\Comication\Comication\bin\ARM\Debug\resources.pri">
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -24,6 +24,10 @@ using Lumia.Imaging;
 using System.Threading.Tasks;
 using Lumia.Imaging.Artistic;
 
+using Lumia.Imaging.Transforms;
+using Lumia.Imaging.Compositing;
+using Windows.UI;
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
 namespace Comication
@@ -33,9 +37,26 @@ namespace Comication
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        // Chroma Key Filter Variables
+        private WriteableBitmap _bitmap = null;
+        private DispatcherTimer _timer = null;
+        private Color _color = new Color();
+        private bool _initialized = false;
+        private bool _rendering = false;
+        private BitmapImage _source = null;
+        private WriteableBitmapRenderer _renderer = null;
+        private FilterEffect _effect = null;
+        private IList<IFilter> _filters = null;
+        private ChromaKeyFilter _chromaKeyFilter = null;
+        private RotationFilter _rotationFilter = null;
 
 
+        StorageFile SelectedImageFile;
+
+
+        // Cartoon Filter Variables
         private FilterEffect _cartoonEffect = null;
+        
 
         // The following  WriteableBitmap contains 
         // the filtered and thumbnail images.
@@ -58,6 +79,13 @@ namespace Comication
             openPicker.PickSingleFileAndContinue();
             
         }
+        private void Chroma_Click(object sender, RoutedEventArgs e) {
+
+
+
+            ApplyChromaFilterAsync();
+        
+        }
  
         public async void Continue(IContinuationActivatedEventArgs args)
         {
@@ -72,7 +100,7 @@ namespace Comication
                 {
                     FileNameText.Text = openPickerContinuationArgs.Files[0].Name;
 
-
+                    SelectedImageFile = openPickerContinuationArgs.Files[0];
                     IRandomAccessStream selectedFileStream = await openPickerContinuationArgs.Files[0].OpenAsync(FileAccessMode.Read);
                     BitmapImage selectedImage = new BitmapImage();
                     selectedImage.SetSource(selectedFileStream);
@@ -80,6 +108,8 @@ namespace Comication
 
                     _cartoonImageBitmap = new WriteableBitmap(selectedImage.PixelHeight,selectedImage.PixelWidth);
                     ApplyFilterAsync(openPickerContinuationArgs.Files[0]);
+                    
+
                 
                 }
                 else
@@ -88,6 +118,11 @@ namespace Comication
                 }
             }
         }
+       
+        
+        
+        
+        
         private async Task<bool> ApplyFilterAsync(StorageFile file)
         {
             // Open a stream for the selected file. 
@@ -130,22 +165,55 @@ namespace Comication
             }
 
             return true;
-        }    
-        
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            // TODO: Prepare page for display here.
-
-            // TODO: If your application contains multiple pages, ensure that you are
-            // handling the hardware Back button by registering for the
-            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-            // If you are using the NavigationHelper provided by some templates,
-            // this event is handled for you.
         }
+
+       private async Task<bool> ApplyChromaFilterAsync()
+        {
+
+            IRandomAccessStream fileStream = await SelectedImageFile.OpenAsync(FileAccessMode.Read);
+
+            string errorMessage = null;
+
+            try
+            {
+                // Show the thumbnail of original image. 
+
+                // Rewind the stream to start. 
+                fileStream.Seek(0);
+
+                // A cartoon effect is initialized with the selected image stream as source.  
+                var imageSource = new RandomAccessStreamImageSource(fileStream);
+                _effect = new FilterEffect(imageSource);
+
+                // Add the cartoon filter as the only filter for the effect. 
+                var blendFilter = new BlendEffect(imageSource,_effect,BlendFunction.Normal,1.0);
+                
+
+               _effect.Filters = new IFilter[] { new ChromaKeyFilter(Windows.UI.Color.FromArgb(255, 108, 152, 75), 0.2, 0, false) };
+                // Create a target where the filtered image will be rendered to
+                var target = new WriteableBitmap(_cartoonImageBitmap.PixelWidth, _cartoonImageBitmap.PixelHeight);
+
+                // Create a new renderer which outputs WriteableBitmaps
+                using (var renderer = new WriteableBitmapRenderer(blendFilter, target))
+                {
+                    await renderer.RenderAsync();
+
+                    // Set the output image to Image control as a source
+                   FilteredView.Source = target;
+
+                    
+                }
+            }
+            catch (Exception exception)
+            {
+                errorMessage = exception.Message;
+            }
+
+            return true;
+        
+        
+        }
+
+        
     }
 }
