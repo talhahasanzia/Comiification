@@ -52,7 +52,7 @@ namespace Comication
 
 
         StorageFile SelectedImageFile;
-
+        StorageFile SelectedImageFile2;
 
         // Cartoon Filter Variables
         private FilterEffect _cartoonEffect = null;
@@ -76,7 +76,7 @@ namespace Comication
             openPicker.ContinuationData["Action"] = "SelectPicture";
             openPicker.FileTypeFilter.Add(".jpg");
             openPicker.FileTypeFilter.Add(".png");
-            openPicker.PickSingleFileAndContinue();
+            openPicker.PickMultipleFilesAndContinue();
             
         }
         private void Chroma_Click(object sender, RoutedEventArgs e) {
@@ -101,11 +101,20 @@ namespace Comication
                     FileNameText.Text = openPickerContinuationArgs.Files[0].Name;
 
                     SelectedImageFile = openPickerContinuationArgs.Files[0];
+                    SelectedImageFile2 = openPickerContinuationArgs.Files[1];
+                   
+                    
                     IRandomAccessStream selectedFileStream = await openPickerContinuationArgs.Files[0].OpenAsync(FileAccessMode.Read);
                     BitmapImage selectedImage = new BitmapImage();
                     selectedImage.SetSource(selectedFileStream);
-                    Preview.Source = selectedImage;
 
+
+                    IRandomAccessStream selectedFileStream2 = await openPickerContinuationArgs.Files[1].OpenAsync(FileAccessMode.Read);
+                    BitmapImage selectedImage2 = new BitmapImage();
+                    selectedImage2.SetSource(selectedFileStream2);
+
+                    Preview.Source = selectedImage;
+                    Preview2.Source = selectedImage2;
                     _cartoonImageBitmap = new WriteableBitmap(selectedImage.PixelHeight,selectedImage.PixelWidth);
                     ApplyFilterAsync(openPickerContinuationArgs.Files[0]);
                     
@@ -171,25 +180,32 @@ namespace Comication
         {
 
             IRandomAccessStream fileStream = await SelectedImageFile.OpenAsync(FileAccessMode.Read);
+            IRandomAccessStream fileStream2 = await SelectedImageFile2.OpenAsync(FileAccessMode.Read);
 
             string errorMessage = null;
 
             try
             {
-                // Show the thumbnail of original image. 
+                
 
                 // Rewind the stream to start. 
                 fileStream.Seek(0);
+                fileStream2.Seek(0);
 
-                // A cartoon effect is initialized with the selected image stream as source.  
+                // Image 1 
                 var imageSource = new RandomAccessStreamImageSource(fileStream);
+                var OtherImage = new RandomAccessStreamImageSource(fileStream2);
+
                 _effect = new FilterEffect(imageSource);
 
+
+
+
                 // Add the cartoon filter as the only filter for the effect. 
-                var blendFilter = new BlendEffect(imageSource,_effect,BlendFunction.Normal,1.0);
+                var blendFilter = new BlendEffect(OtherImage,_effect,BlendFunction.Normal,1.0);
                 
 
-               _effect.Filters = new IFilter[] { new ChromaKeyFilter(Windows.UI.Color.FromArgb(255, 108, 152, 75), 0.2, 0, false) };
+               _effect.Filters = new IFilter[] { new ChromaKeyFilter(Windows.UI.Color.FromArgb(255, 36, 219, 49),0.2,0.3,false) };
                 // Create a target where the filtered image will be rendered to
                 var target = new WriteableBitmap(_cartoonImageBitmap.PixelWidth, _cartoonImageBitmap.PixelHeight);
 
