@@ -58,8 +58,14 @@
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\colorWheel.png">
-      <PackagePath>Images\colorWheel.png</PackagePath>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\colorWheel.png">
+      <PackagePath>colorWheel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\RGB.png">
+      <PackagePath>Images\RGB.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Assets\sample.png">
+      <PackagePath>Assets\sample.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\StoreManifest.xml">
       <PackagePath>StoreManifest.xml</PackagePath>

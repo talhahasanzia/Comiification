@@ -1,4 +1,5 @@
 Assets\Logo.scale-240.png
+Assets\sample.png
 Assets\SmallLogo.scale-240.png
 Assets\SplashScreen.scale-240.png
 Assets\Square71x71Logo.scale-240.png
@@ -8,5 +9,6 @@ App.xbf
 Comication.xr.xml
 ComicationView.xbf
 MainPage.xbf
-Images\colorWheel.png
+colorWheel.png
+Images\RGB.png
 StoreManifest.xml

@@ -49,8 +49,8 @@ namespace Comication
         private IList<IFilter> _filters = null;
         private ChromaKeyFilter _chromaKeyFilter = null;
         private RotationFilter _rotationFilter = null;
-
-
+        StorageFile filesample;
+        Color BackgroundColor;
         StorageFile SelectedImageFile;
         StorageFile SelectedImageFile2;
         BitmapImage selectedImage;
@@ -66,9 +66,20 @@ namespace Comication
 
         public MainPage()
         {
+           
+           
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+           
+            
+            BitmapImage bitmapImage = new BitmapImage();
+            // bitmapImage.SetSource(fileStream2);
+
+
+            bitmapImage.UriSource = new Uri("ms-appx:///Assets/sample.png");
+            FilteredView.Source = bitmapImage;
+           
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -104,6 +115,8 @@ namespace Comication
                     SelectedImageFile2 = openPickerContinuationArgs.Files[1];
                    
                     
+                    
+
                     IRandomAccessStream selectedFileStream = await openPickerContinuationArgs.Files[0].OpenAsync(FileAccessMode.Read);
                   selectedImage = new BitmapImage();
                     selectedImage.SetSource(selectedFileStream);
@@ -115,7 +128,7 @@ namespace Comication
 
                     Preview.Source = selectedImage;
                     Preview2.Source = selectedImage2;
-                    _cartoonImageBitmap = new WriteableBitmap(selectedImage.PixelHeight,selectedImage.PixelWidth);
+                    
                     
                     
                     // Cartoon Filter
@@ -136,8 +149,11 @@ namespace Comication
         
         
         
-        private async Task<bool> ApplyFilterAsync(StorageFile file)
+        private async Task<bool> ApplyCartoonFilterAsync(StorageFile file)
         {
+            _cartoonImageBitmap = new WriteableBitmap(selectedImage.PixelHeight, selectedImage.PixelWidth);
+
+
             // Open a stream for the selected file. 
             IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
 
@@ -182,15 +198,27 @@ namespace Comication
 
        private async Task<bool> ApplyChromaFilterAsync()
         {
-
-            IRandomAccessStream fileStream = await SelectedImageFile.OpenAsync(FileAccessMode.Read);
-            IRandomAccessStream fileStream2 = await SelectedImageFile2.OpenAsync(FileAccessMode.Read);
-
-            string errorMessage = null;
-
             try
             {
-                
+
+               // await getFile();
+               
+                //FileNameText.Text = filesample.Name;
+
+               
+
+                IRandomAccessStream fileStream = await SelectedImageFile.OpenAsync(FileAccessMode.Read);
+                IRandomAccessStream fileStream2 = await filesample.OpenAsync(FileAccessMode.Read);
+                BitmapImage bitmapImage = new BitmapImage();
+               // bitmapImage.SetSource(fileStream2);
+
+
+                bitmapImage.UriSource = new Uri("ms-appx:///Assets/sample.png");
+                FilteredView.Source = bitmapImage;
+               
+
+
+
 
                 // Rewind the stream to start. 
                 fileStream.Seek(0);
@@ -198,20 +226,23 @@ namespace Comication
 
                 // Image 1 
                 var imageSource = new RandomAccessStreamImageSource(fileStream);
+                // Image 2
                 var OtherImage = new RandomAccessStreamImageSource(fileStream2);
 
+
+                // Effect
                 _effect = new FilterEffect(imageSource);
 
 
 
 
-                // Add the cartoon filter as the only filter for the effect. 
-                var blendFilter = new BlendEffect(OtherImage,_effect,BlendFunction.Normal,1.0);
-                
+                // blend effect. 
+                var blendFilter = new BlendEffect(OtherImage, _effect, BlendFunction.Normal, 1.0);
 
-               _effect.Filters = new IFilter[] { new ChromaKeyFilter(Windows.UI.Color.FromArgb(255, 217, 204, 185),0.2,0.3,false) };
+                BackgroundColor = Color.FromArgb(255, 217, 204, 185);
+                _effect.Filters = new IFilter[] { new ChromaKeyFilter(BackgroundColor, 0.2, 0.3, false) };
                 // Create a target where the filtered image will be rendered to
-                var target = new WriteableBitmap(_cartoonImageBitmap.PixelWidth, _cartoonImageBitmap.PixelHeight);
+                var target = new WriteableBitmap(selectedImage.PixelWidth, selectedImage.PixelHeight);
 
                 // Create a new renderer which outputs WriteableBitmaps
                 using (var renderer = new WriteableBitmapRenderer(blendFilter, target))
@@ -219,21 +250,37 @@ namespace Comication
                     await renderer.RenderAsync();
 
                     // Set the output image to Image control as a source
-                   FilteredView.Source = target;
+                    FilteredView.Source = target;
 
-                    
+
                 }
             }
-            catch (Exception exception)
+            catch (FileNotFoundException ex)
             {
-                errorMessage = exception.Message;
+                ExceptionText.Text = ex.Message;
+            }
+            catch (Exception e)
+            {
+                ExceptionText.Text=e.Message;
             }
 
             return true;
         
         
         }
+       async Task<bool> getFile()
+       {
 
+           try
+           {
+               filesample = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(@"/sample.png");
+               return true;
+           }
+           catch(Exception e) {
+               ExceptionText.Text = e.Message;
+               return false;
+           }
+       }
        private void FilteredView_Tapped(object sender, TappedRoutedEventArgs e)
        {
            var Point = e.GetPosition(FilteredView);

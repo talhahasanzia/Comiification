@@ -15,6 +15,8 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
       <RootMethod Name="GetColumn" />
@@ -40,6 +42,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="TextAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="HorizontalAlignment" />
@@ -60,27 +63,41 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="Children" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontWeight" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
+      <RootMethod Name="GetZIndex" />
+      <RootMethod Name="SetZIndex" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Fill" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Stroke" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Slider">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="FontWeight" />
-      <RootEvent Name="Click" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Maximum" />
     </RootType>
     <RootType FullName="Comication.ComicationView" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
-      <RootMethod Name="GetZIndex" />
-      <RootMethod Name="SetZIndex" />
-    </RootType>
     <RootType FullName="Comication.MainPage" />
   </Roots.RootTypes>
 </Roots>
