@@ -22,7 +22,7 @@
         <Button Content="Select" Click="Button_Click" Margin="44.167,176.5,0,69" Grid.Row="1" Grid.Column="1"/>
         <Image x:Name="Preview" Height="128" Margin="216.167,28.5,39.667,146" VerticalAlignment="Center" Width="140" Canvas.ZIndex="1" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
         <TextBlock x:Name="FileNameText" HorizontalAlignment="Left" Margin="0,245.5,0,0" TextWrapping="Wrap" Text="File Selected" VerticalAlignment="Top" Height="57" Width="326" FontSize="16" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Image x:Name="FilteredView" MaxHeight="300" MaxWidth="300" Margin="10.167,10,9.667,23.5" Grid.Column="1" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image x:Name="FilteredView" MaxHeight="300" MaxWidth="300" Margin="10.167,10,9.667,23.5" Grid.Column="1" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Tapped="FilteredView_Tapped"/>
         <Button Content="Chroma" Click="Chroma_Click" Margin="216.167,176.5,0,69" Grid.Row="1" Grid.Column="1"/>
         <Image x:Name="Preview2" Height="128" Margin="13.167,28.5,242.667,146" VerticalAlignment="Center" Width="140" Canvas.ZIndex="1" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
     </Grid>

@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Comication.ComicationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Comication"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:c4fToolkit="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="17*"/>
+    		<ColumnDefinition Width="368*"/>
+    		<ColumnDefinition Width="15*"/>
+    	</Grid.ColumnDefinitions>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="42*"/>
+    		<RowDefinition Height="459*"/>
+    		<RowDefinition Height="140*" />
+    	</Grid.RowDefinitions>
+    	<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="42" Grid.RowSpan="2" Width="368" Margin="0.333,0,0,0" FontSize="33" Grid.Column="1" FontFamily="Buxton Sketch"/>
+    	<Image Grid.Column="1" HorizontalAlignment="Center" Height="Auto" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Stretch="UniformToFill"/>
+    	<StackPanel x:Name="Step1" Grid.Column="1" Height="auto" Margin="1,0,0,0" Grid.Row="2" Width="auto" Visibility="Collapsed">
+		<Button Content="Select" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Top" BorderThickness="1,1.5" FontFamily="Buxton Sketch" FontWeight="SemiLight"/>
+		<Button Content="Continue" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Top" BorderThickness="1,1.5" FontFamily="Buxton Sketch" FontWeight="SemiLight"/>
+		</StackPanel>
+    	<Grid x:Name="Step2" Width="Auto" Height="Auto" Margin="0" Grid.Column="1" Grid.Row="2" Visibility="Collapsed">
+		<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="92*"/>
+    		<ColumnDefinition Width="92*"/>
+    		<ColumnDefinition Width="92*"/>
+			<ColumnDefinition Width="92*"/>
+
+    	</Grid.ColumnDefinitions>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="35*"/>
+    		<RowDefinition Height="35*"/>
+    		<RowDefinition Height="35*" />
+			<RowDefinition Height="35*" />
+			<RowDefinition Height="35*" />
+    	</Grid.RowDefinitions>
+    		<TextBlock Height="Auto" Margin="0" TextWrapping="Wrap" Text="Replace Background With Color" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="3" FontSize="19" FontFamily="Buxton Sketch"/>
+    		<Rectangle Height="Auto" Margin="1,0" Grid.Row="1" Grid.Column="0" Width="Auto" Fill="White"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="1" Grid.Column="1" Width="Auto" Fill="#FFB9B9B9"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="1" Grid.Column="2" Width="Auto" Fill="#FF5F5F5F"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="1" Grid.Column="3" Width="Auto" Fill="#FF191919"/>
+
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="2" Grid.Column="0" Width="Auto" Fill="#FF97C3F0"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="2" Grid.Column="1" Width="Auto" Fill="#FF4872E0"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="2" Grid.Column="2" Width="Auto" Fill="#FF2F408B"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="2" Grid.Column="3" Width="Auto" Fill="#FF0023FF"/>
+			
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="3" Grid.Column="0" Width="Auto" Fill="#FF8BEC8F"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="3" Grid.Column="1" Width="Auto" Fill="#FF51EA4A"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="3" Grid.Column="2" Width="Auto" Fill="#FF25B632"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="3" Grid.Column="3" Width="Auto" Fill="Green"/>
+
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="0" Width="Auto" Fill="#FFF1B1B1"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="1" Width="Auto" Fill="#FFF06868"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="2" Width="Auto" Fill="#FFB43030"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="3" Width="Auto" Fill="Red"/>
+			<Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="3" Width="Auto" Fill="Red"/>
+			<Image Height="Auto" Margin="1,0" Grid.Row="0" Grid.Column="3" Width="Auto" Source="Images/colorWheel.png" />
+
+		</Grid>
+    	
+    	
+
+    </Grid>
+</Page>
+

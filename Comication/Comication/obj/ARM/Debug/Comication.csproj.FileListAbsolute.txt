@@ -82,3 +82,9 @@ F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\qualifiers.txt
 F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\qualifiers.txt.intermediate
 F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\ProjectArchitectures.txt
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\ComicationView.g.i.cs
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\ComicationView.g.cs
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\ComicationView.xaml
+F:\Github\Comiification\Comication\Comication\obj\ARM\Debug\ComicationView.xbf
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\Images\colorWheel.png
+F:\Github\Comiification\Comication\Comication\bin\ARM\Debug\ComicationView.xbf

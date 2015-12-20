@@ -53,7 +53,7 @@ namespace Comication
 
         StorageFile SelectedImageFile;
         StorageFile SelectedImageFile2;
-
+        BitmapImage selectedImage;
         // Cartoon Filter Variables
         private FilterEffect _cartoonEffect = null;
         
@@ -105,7 +105,7 @@ namespace Comication
                    
                     
                     IRandomAccessStream selectedFileStream = await openPickerContinuationArgs.Files[0].OpenAsync(FileAccessMode.Read);
-                    BitmapImage selectedImage = new BitmapImage();
+                  selectedImage = new BitmapImage();
                     selectedImage.SetSource(selectedFileStream);
 
 
@@ -116,7 +116,11 @@ namespace Comication
                     Preview.Source = selectedImage;
                     Preview2.Source = selectedImage2;
                     _cartoonImageBitmap = new WriteableBitmap(selectedImage.PixelHeight,selectedImage.PixelWidth);
-                    ApplyFilterAsync(openPickerContinuationArgs.Files[0]);
+                    
+                    
+                    // Cartoon Filter
+
+                    //ApplyFilterAsync(openPickerContinuationArgs.Files[0]);
                     
 
                 
@@ -205,7 +209,7 @@ namespace Comication
                 var blendFilter = new BlendEffect(OtherImage,_effect,BlendFunction.Normal,1.0);
                 
 
-               _effect.Filters = new IFilter[] { new ChromaKeyFilter(Windows.UI.Color.FromArgb(255, 36, 219, 49),0.2,0.3,false) };
+               _effect.Filters = new IFilter[] { new ChromaKeyFilter(Windows.UI.Color.FromArgb(255, 217, 204, 185),0.2,0.3,false) };
                 // Create a target where the filtered image will be rendered to
                 var target = new WriteableBitmap(_cartoonImageBitmap.PixelWidth, _cartoonImageBitmap.PixelHeight);
 
@@ -229,6 +233,31 @@ namespace Comication
         
         
         }
+
+       private void FilteredView_Tapped(object sender, TappedRoutedEventArgs e)
+       {
+           var Point = e.GetPosition(FilteredView);
+          
+           var bitmap = new WriteableBitmap((int)FilteredView.ActualWidth, (int)FilteredView.ActualHeight);
+
+         
+
+
+          
+            // ERROR HERE
+               //var picked = bitmap.Pixels[((int)Point.Y) * bitmap.PixelWidth + ((int)Point.X)];
+
+               //_color = new Color
+               //{
+               //    A = 0xFF,
+               //    R = (byte)((picked & 0x00FF0000) >> 16),
+               //    G = (byte)((picked & 0x0000FF00) >> 8),
+               //    B = (byte)(picked & 0x000000FF)
+               //};
+          
+          
+           
+       }
 
         
     }
