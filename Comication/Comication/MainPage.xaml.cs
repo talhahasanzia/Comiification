@@ -208,7 +208,7 @@ namespace Comication
                
 
                 IRandomAccessStream fileStream = await SelectedImageFile.OpenAsync(FileAccessMode.Read);
-                IRandomAccessStream fileStream2 = await filesample.OpenAsync(FileAccessMode.Read);
+                IRandomAccessStream fileStream2 = await SelectedImageFile2.OpenAsync(FileAccessMode.Read);
                 BitmapImage bitmapImage = new BitmapImage();
                // bitmapImage.SetSource(fileStream2);
 
