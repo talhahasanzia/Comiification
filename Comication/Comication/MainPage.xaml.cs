@@ -90,11 +90,11 @@ namespace Comication
             openPicker.PickMultipleFilesAndContinue();
             
         }
-        private void Chroma_Click(object sender, RoutedEventArgs e) {
+        private async void Chroma_Click(object sender, RoutedEventArgs e) {
 
 
 
-            ApplyChromaFilterAsync();
+            await ApplyChromaFilterAsync();
         
         }
  
@@ -205,15 +205,24 @@ namespace Comication
                
                 //FileNameText.Text = filesample.Name;
 
+
+
+
+                StorageFolder installFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+
+                StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///colorWheel.png"));
+
+                
+                
                
 
                 IRandomAccessStream fileStream = await SelectedImageFile.OpenAsync(FileAccessMode.Read);
-                IRandomAccessStream fileStream2 = await SelectedImageFile2.OpenAsync(FileAccessMode.Read);
+                IRandomAccessStream backgroundStream = await file.OpenAsync(FileAccessMode.Read);
                 BitmapImage bitmapImage = new BitmapImage();
-               // bitmapImage.SetSource(fileStream2);
+               bitmapImage.SetSource(backgroundStream);
 
 
-                bitmapImage.UriSource = new Uri("ms-appx:///Assets/sample.png");
+                
                 FilteredView.Source = bitmapImage;
                
 
@@ -222,12 +231,14 @@ namespace Comication
 
                 // Rewind the stream to start. 
                 fileStream.Seek(0);
-                fileStream2.Seek(0);
+                backgroundStream.Seek(0);
 
                 // Image 1 
                 var imageSource = new RandomAccessStreamImageSource(fileStream);
+                
+                
                 // Image 2
-                var OtherImage = new RandomAccessStreamImageSource(fileStream2);
+                var BackgroundImage = new RandomAccessStreamImageSource(backgroundStream);
 
 
                 // Effect
@@ -237,7 +248,7 @@ namespace Comication
 
 
                 // blend effect. 
-                var blendFilter = new BlendEffect(OtherImage, _effect, BlendFunction.Normal, 1.0);
+                //var blendFilter = new BlendEffect(BackgroundImage, _effect, BlendFunction.Normal, 1.0);
 
                 BackgroundColor = Color.FromArgb(255, 217, 204, 185);
                 _effect.Filters = new IFilter[] { new ChromaKeyFilter(BackgroundColor, 0.2, 0.3, false) };
@@ -245,7 +256,7 @@ namespace Comication
                 var target = new WriteableBitmap(selectedImage.PixelWidth, selectedImage.PixelHeight);
 
                 // Create a new renderer which outputs WriteableBitmaps
-                using (var renderer = new WriteableBitmapRenderer(blendFilter, target))
+                using (var renderer = new WriteableBitmapRenderer(_effect, target))
                 {
                     await renderer.RenderAsync();
 
@@ -268,6 +279,8 @@ namespace Comication
         
         
         }
+
+
        async Task<bool> getFile()
        {
 
@@ -281,7 +294,9 @@ namespace Comication
                return false;
            }
        }
-       private void FilteredView_Tapped(object sender, TappedRoutedEventArgs e)
+      
+        
+        private void FilteredView_Tapped(object sender, TappedRoutedEventArgs e)
        {
            var Point = e.GetPosition(FilteredView);
           
