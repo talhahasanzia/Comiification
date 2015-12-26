@@ -57,7 +57,7 @@ namespace Comication
             {
                 // It is a continuation. Assuming we have already navigated
                 // to ChatPage when restoring the state.
-                var currentPage = rootFrame.Content as MainPage;
+                var currentPage = rootFrame.Content as ComicationView;
                 currentPage.Continue(continuationEventArgs);
 
             }

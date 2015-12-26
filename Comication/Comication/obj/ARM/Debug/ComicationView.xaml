@@ -28,18 +28,49 @@
 
 
 
-        <TextBlock x:Name="Header" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="42" Grid.RowSpan="2" Width="305" Margin="0,0" FontSize="33" Grid.Column="1" FontFamily="Buxton Sketch"/>
-        <Image Grid.Column="1" HorizontalAlignment="Center" Height="Auto" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Stretch="UniformToFill"/>
-        <StackPanel x:Name="Step1" Grid.Column="1" Height="auto" Margin="1,0,0,0" Grid.Row="2" Width="auto" Visibility="Collapsed">
-            <Button Content="Select" Grid.Column="1" HorizontalAlignment="Center" Margin="129,0,129.5,0" Grid.Row="2" VerticalAlignment="Top" BorderThickness="1,1.5" FontFamily="Buxton Sketch" FontWeight="SemiLight" FontSize="28" Height="61"/>
-            <Button Content="Continue" Grid.Column="1" HorizontalAlignment="Center" Margin="129,0,129.5,0" Grid.Row="2" VerticalAlignment="Top" BorderThickness="1,1.5" FontFamily="Buxton Sketch" FontWeight="SemiLight" FontSize="28" Height="61"/>
-        </StackPanel>
+        <TextBlock x:Name="Header" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="42" Grid.RowSpan="2" Width="305" Margin="0,0" FontSize="33" Grid.Column="1" FontFamily="Calibri"/>
+        <Image x:Name="FrontView" Grid.Column="1" HorizontalAlignment="Center" Height="Auto" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Stretch="UniformToFill" Canvas.ZIndex="5"/>
+        <Image x:Name="BackView" Grid.Column="1" Height="Auto" Margin="0" Grid.Row="1" Width="Auto" Stretch="None"/>
+
+
+
+
+        <Grid x:Name="Step1" Grid.Column="1" Height="auto" Margin="1,0,0,0" Grid.Row="2" Width="auto" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+
+            <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="20,10" VerticalAlignment="Stretch" Width="Auto">
+
+                <Button x:ConnectionId='7' Content="Select" Width="Auto" HorizontalAlignment="Stretch" Margin="0,0" VerticalAlignment="Stretch" BorderThickness="1,1.5" FontFamily="Calibiri" FontWeight="SemiLight" FontSize="28" Height="Auto"                      Grid.ColumnSpan="2"/>
+                <Button x:ConnectionId='8' Content="Continue"                        HorizontalAlignment="Stretch" Margin="0,0" VerticalAlignment="Stretch" BorderThickness="1,1.5" FontFamily="Calibri" FontWeight="SemiLight" FontSize="28" Height="Auto" Width="Auto" Grid.ColumnSpan="2"/>
+
+            </StackPanel>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" VerticalAlignment="Stretch" Width="Auto">
+                <TextBlock x:Name="ImageMode" TextWrapping="Wrap" Text="Image Mode" Height="23" Margin="0,0,0.333,0" FontSize="20"/>
+                <ComboBox x:ConnectionId='6' x:Name="ImageModes"                                                 >
+                    <ComboBoxItem Content="Fill" IsSelected="True" FontSize="14" Padding="0" VerticalAlignment="Stretch"/>
+                    <ComboBoxItem Content="Stretch"  VerticalAlignment="Stretch" Padding="0" FontSize="14"/>
+                    <ComboBoxItem Content="Uniform"  FontSize="14" VerticalAlignment="Stretch" Padding="0,0,4,0" />
+                </ComboBox>
+
+
+            </StackPanel>
+
+        </Grid>
+
+
+
+
         <Grid x:Name="Step2" Width="Auto" Height="Auto" Margin="0.333,0,0,10" Grid.Column="1" Grid.Row="2" Visibility="Collapsed">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="30*"/>
 
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -47,53 +78,22 @@
                 <RowDefinition Height="35*"/>
                 <RowDefinition Height="35*" />
                 <RowDefinition Height="35*" />
-                <RowDefinition Height="35*" />
+
             </Grid.RowDefinitions>
-            <TextBlock Height="Auto" Margin="0" TextWrapping="Wrap" Text="Background Color To Be Replaced" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="3" FontSize="19" FontFamily="Buxton Sketch"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="1" Grid.Column="0" Width="Auto" Fill="White"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="1" Grid.Column="1" Width="Auto" Fill="#FFB9B9B9"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="1" Grid.Column="2" Width="Auto" Fill="#FF5F5F5F"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="1" Grid.Column="3" Width="Auto" Fill="#FF191919"/>
+            <TextBlock Height="Auto" Margin="0,0,0,0" TextWrapping="Wrap" Text="Background Color To Be Replaced" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="3" FontSize="19" FontFamily="Calibri" HorizontalAlignment="Center"/>
 
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="2" Grid.Column="0" Width="Auto" Fill="#FF97C3F0"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="2" Grid.Column="1" Width="Auto" Fill="#FF4872E0"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="2" Grid.Column="2" Width="Auto" Fill="#FF2F408B"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="2" Grid.Column="3" Width="Auto" Fill="#FF0023FF"/>
-
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="3" Grid.Column="0" Width="Auto" Fill="#FF8BEC8F"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="3" Grid.Column="1" Width="Auto" Fill="#FF51EA4A"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="3" Grid.Column="2" Width="Auto" Fill="#FF25B632"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="3" Grid.Column="3" Width="Auto" Fill="Green"/>
-
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="0" Width="Auto" Fill="#FFF1B1B1"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="1" Width="Auto" Fill="#FFF06868"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="2" Width="Auto" Fill="#FFB43030"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="3" Width="Auto" Fill="Red"/>
-            <Rectangle Height="Auto" Margin="1,0" Grid.Row="4" Grid.Column="3" Width="Auto" Fill="Red"/>
-            <Image Height="Auto" Margin="1,0" Grid.Row="0" Grid.Column="3" Width="Auto" Source="Images/RGB.png" />
-            <Grid x:Name="Color_Picker" Grid.Column="1"  HorizontalAlignment="Right" Height="207" Margin="0,-207,1,25.833" VerticalAlignment="Bottom" Width="209" Grid.ColumnSpan="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="29*"/>
-                    <ColumnDefinition Width="63*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50*"/>
-                    <RowDefinition Height="50*"/>
-                    <RowDefinition Height="50*"/>
-                    <RowDefinition Height="50*"/>
-                </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Stretch" Height="Auto" Margin="10,10,10,10" TextWrapping="Wrap" Text="R" VerticalAlignment="Stretch" Width="Auto" FontSize="29" TextAlignment="Center"/>
-                <TextBlock HorizontalAlignment="Stretch" Height="Auto" Margin="10,10,10,10" TextWrapping="Wrap" Text="G" VerticalAlignment="Stretch" Width="Auto" FontSize="29" TextAlignment="Center" Grid.Row="1"/>
-                <TextBlock HorizontalAlignment="Stretch" Height="Auto" Margin="10,10,10,10" TextWrapping="Wrap" Text="B" VerticalAlignment="Stretch" Width="Auto" FontSize="29" TextAlignment="Center" Grid.Row="2"/>
-                <Rectangle x:Name="ColorOutput" Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" Grid.Row="3" Stroke="Black" VerticalAlignment="Stretch" Width="Auto"/>
-                <Slider x:Name="R_Value" Grid.Column="1" HorizontalAlignment="Center" Height="Auto" Margin="9.667,0,0,0" VerticalAlignment="Center" Width="91" Maximum="255"/>
-                <Slider x:Name="G_Value" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Height="Auto" Margin="9.667,0,0,0" VerticalAlignment="Center" Width="91" Maximum="255"/>
-                <Slider x:Name="B_Value" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Height="Auto" Margin="9.667,0,0,0" VerticalAlignment="Center" Width="91" Maximum="255"/>
-                <Button Content="OK" Grid.Column="1" HorizontalAlignment="Stretch" Height="40" Margin="0,0" Grid.Row="3" VerticalAlignment="Center" Width="Auto" FontFamily="Buxton Sketch" FontSize="28" FontWeight="SemiLight"/>
-
-            </Grid>
+            <Slider x:ConnectionId='1' x:Name="R_Value" Height="Auto" HorizontalAlignment="Stretch" Margin="0,0" VerticalAlignment="Stretch" Width="Auto" Maximum="255" Grid.Column="1" Background="Red" Grid.Row="1"                                    />
+            <Slider x:ConnectionId='2' x:Name="G_Value" Grid.Row="2" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" VerticalAlignment="Stretch" Width="Auto" Maximum="255" Grid.Column="1" Background="Green"                                    />
+            <Slider x:ConnectionId='3' x:Name="B_Value" Grid.Row="3" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" VerticalAlignment="Stretch" Width="Auto" Maximum="255" Grid.Column="1" Background="Blue"                                    />
+            <Rectangle x:Name="ColorOutput" Fill="#FFF4F4F5" Grid.Row="1" HorizontalAlignment="Stretch" Height="Auto"  VerticalAlignment="Stretch" Width="Auto" Margin="10,10,10,10" Grid.RowSpan="3"/>
+            <Button x:ConnectionId='4' Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Margin="0,0" Grid.Row="1" FontFamily="Calibri" Height="Auto" Width="Auto" Grid.RowSpan="2"                       />
+            <Button x:ConnectionId='5' Content="Continue" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Margin="7.333,17,7,-9" Grid.Row="2" FontFamily="Calibri" Height="Auto" Width="Auto" Grid.RowSpan="2"                                              />
 
         </Grid>
+
+
+
+
         <Grid x:Name="Step3" Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="1.333,0,0,10" Grid.Row="2" VerticalAlignment="Stretch" Width="Auto" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20*"/>
@@ -104,12 +104,17 @@
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="35*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock HorizontalAlignment="Stretch" Height="Auto" Width="Auto" Margin="0,0" Grid.RowSpan="1" TextWrapping="Wrap" Text="Select Background Comic Style" VerticalAlignment="Stretch" Grid.ColumnSpan="2" FontSize="19" FontFamily="Buxton Sketch"/>
+            <TextBlock HorizontalAlignment="Stretch" Height="Auto" Width="Auto" Margin="0,0" Grid.RowSpan="1" TextWrapping="Wrap" Text="Select Background Comic Style" VerticalAlignment="Stretch" Grid.ColumnSpan="2" FontSize="19" FontFamily="Calibri"/>
             <Image x:Name="LNaviComic" HorizontalAlignment="Stretch" Height="Auto" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto"/>
             <Image x:Name="CurrentComic" HorizontalAlignment="Stretch" Height="Auto" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto"/>
             <Image x:Name="RNaviComic" HorizontalAlignment="Stretch" Height="Auto" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto"/>
-            <Button Content="Apply" Grid.Column="1"   Margin="159.167,-23,0,98" VerticalAlignment="Bottom" FontFamily="Buxton Sketch" BorderThickness="1,1.5" Height="55" FontSize="28" Canvas.ZIndex="5" Width="91" Grid.ColumnSpan="2" Grid.RowSpan="2" FontWeight="SemiLight"/>
+            <Button Content="Apply" Grid.Column="1"   Margin="172.167,-26,0,98" VerticalAlignment="Bottom" FontFamily="Calibiri" BorderThickness="1,1.5" Height="55" FontSize="28" Canvas.ZIndex="5" Width="91" Grid.ColumnSpan="2" Grid.RowSpan="2" FontWeight="SemiLight"/>
         </Grid>
+
+
+
+
+
         <Grid x:Name="Step4" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Margin="1.333,0,14,0" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="219*"/>
@@ -121,6 +126,11 @@
                 <Button x:Name="Cancel" Content="No Cartoon" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,0,0.167,0" FontFamily="Buxton Sketch" FontWeight="SemiLight" BorderThickness="1,1.5" FontSize="28"/>
             </StackPanel>
         </Grid>
+
+
+
+
+
         <Grid x:Name="Step5" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" Margin="0,0" Grid.Row="2" Canvas.ZIndex="-5" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="25*"/>
@@ -162,6 +172,12 @@
             </StackPanel>
         </Grid>
         <TextBox x:Name="TextOnImage" Grid.Column="1" HorizontalAlignment="Left" Margin="133.333,169.333,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF999999" Visibility="Collapsed"/>
+
+
+
+
+
+
         <Grid x:Name="FinalStep" Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" Grid.Row="2" VerticalAlignment="Stretch" Width="Auto" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40*"/>
@@ -176,6 +192,8 @@
             <Button Content="Save to Gallery" Width="172" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0" VerticalAlignment="Top" BorderThickness="1,1.5" FontSize="28" FontFamily="Buxton Sketch" FontWeight="SemiLight"/>
             <Button Content="Go Back Edit" Width="172" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0" VerticalAlignment="Top" BorderThickness="1,1.5" FontSize="28" FontFamily="Buxton Sketch" FontWeight="SemiLight" Grid.Row="1"/>
         </Grid>
+        <Ellipse x:Name="ColorFocus" HorizontalAlignment="Stretch" Height="Auto" Margin="50,100" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto" Stroke="Black" StrokeThickness="5" Grid.Column="1" Visibility="Collapsed" Canvas.ZIndex="12"/>
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
 
 
 

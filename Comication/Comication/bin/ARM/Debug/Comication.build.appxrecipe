@@ -61,6 +61,9 @@
     <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\colorWheel.png">
       <PackagePath>colorWheel.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\comication.png">
+      <PackagePath>comication.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\RGB.png">
       <PackagePath>Images\RGB.png</PackagePath>
     </AppxPackagedFile>

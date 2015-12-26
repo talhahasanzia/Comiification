@@ -51,9 +51,10 @@ namespace Comication
         private RotationFilter _rotationFilter = null;
         StorageFile filesample;
         Color BackgroundColor;
-        StorageFile SelectedImageFile;
-        StorageFile SelectedImageFile2;
-        BitmapImage selectedImage;
+       private StorageFile SelectedImageFile;
+       private StorageFile SelectedImageFile2;
+        private 
+            BitmapImage selectedImage;
         // Cartoon Filter Variables
         private FilterEffect _cartoonEffect = null;
         
@@ -62,7 +63,7 @@ namespace Comication
         // the filtered and thumbnail images.
         private WriteableBitmap _cartoonImageBitmap = null;
 
-        FileOpenPicker openPicker;
+        
 
         public MainPage()
         {
@@ -73,21 +74,11 @@ namespace Comication
             this.NavigationCacheMode = NavigationCacheMode.Required;
            
             
-            BitmapImage bitmapImage = new BitmapImage();
-            // bitmapImage.SetSource(fileStream2);
-
-
-            bitmapImage.UriSource = new Uri("ms-appx:///Assets/sample.png");
-            FilteredView.Source = bitmapImage;
            
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var openPicker = new FileOpenPicker();
-            openPicker.ContinuationData["Action"] = "SelectPicture";
-            openPicker.FileTypeFilter.Add(".jpg");
-            openPicker.FileTypeFilter.Add(".png");
-            openPicker.PickMultipleFilesAndContinue();
+
             
         }
         private async void Chroma_Click(object sender, RoutedEventArgs e) {
@@ -98,52 +89,7 @@ namespace Comication
         
         }
  
-        public async void Continue(IContinuationActivatedEventArgs args)
-        {
-            if (args.Kind == ActivationKind.PickFileContinuation)
-            {
-                var openPickerContinuationArgs = args as FileOpenPickerContinuationEventArgs;
-
-                // Recover the "Action" info we stored in ContinuationData
-                string action = (string)openPickerContinuationArgs.ContinuationData["Action"];
-
-                if (openPickerContinuationArgs.Files.Count > 0)
-                {
-                    FileNameText.Text = openPickerContinuationArgs.Files[0].Name;
-
-                    SelectedImageFile = openPickerContinuationArgs.Files[0];
-                    SelectedImageFile2 = openPickerContinuationArgs.Files[1];
-                   
-                    
-                    
-
-                    IRandomAccessStream selectedFileStream = await openPickerContinuationArgs.Files[0].OpenAsync(FileAccessMode.Read);
-                  selectedImage = new BitmapImage();
-                    selectedImage.SetSource(selectedFileStream);
-
-
-                    IRandomAccessStream selectedFileStream2 = await openPickerContinuationArgs.Files[1].OpenAsync(FileAccessMode.Read);
-                    BitmapImage selectedImage2 = new BitmapImage();
-                    selectedImage2.SetSource(selectedFileStream2);
-
-                    Preview.Source = selectedImage;
-                    Preview2.Source = selectedImage2;
-                    
-                    
-                    
-                    // Cartoon Filter
-
-                    //ApplyFilterAsync(openPickerContinuationArgs.Files[0]);
-                    
-
-                
-                }
-                else
-                {
-                    // TODO: Write code here to handle picker cancellation.
-                }
-            }
-        }
+        
        
         
         
@@ -206,6 +152,7 @@ namespace Comication
                 //FileNameText.Text = filesample.Name;
 
 
+                BitmapImage bitmapImageBack = new BitmapImage();
 
 
                 StorageFolder installFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
@@ -281,20 +228,7 @@ namespace Comication
         }
 
 
-       async Task<bool> getFile()
-       {
-
-           try
-           {
-               filesample = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(@"/sample.png");
-               return true;
-           }
-           catch(Exception e) {
-               ExceptionText.Text = e.Message;
-               return false;
-           }
-       }
-      
+       
         
         private void FilteredView_Tapped(object sender, TappedRoutedEventArgs e)
        {
@@ -320,6 +254,11 @@ namespace Comication
           
            
        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ComicationView));
+        }
 
         
     }

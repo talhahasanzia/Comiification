@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid x:Name="Start">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="395*"  />
@@ -26,6 +26,7 @@
         <Button x:ConnectionId='3' Content="Chroma"                      Margin="216.167,176.5,0,69" Grid.Row="1" Grid.Column="1"/>
         <Image x:Name="Preview2" Height="128" Margin="13.167,28.5,242.667,146" VerticalAlignment="Center" Width="140" Canvas.ZIndex="1" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
         <TextBlock x:Name="ExceptionText" HorizontalAlignment="Left" Margin="198.167,224.5,0,0" TextWrapping="Wrap" Text="File Selected" VerticalAlignment="Top" Height="73" Width="198" FontSize="16" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Button x:ConnectionId='4' x:Name="StartButton" Grid.ColumnSpan="2" Content="start" HorizontalAlignment="Left" VerticalAlignment="Top"                       />
     </Grid>
 </Page>
 
