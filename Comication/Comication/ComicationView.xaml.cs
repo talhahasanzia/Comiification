@@ -298,6 +298,13 @@ namespace Comication
 
         }
 
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Step2.Visibility = Visibility.Collapsed;
+            Step3.Visibility = Visibility.Visible;
+            ColorFocus.Visibility = Visibility.Collapsed;
+        }
+
 
 
 
