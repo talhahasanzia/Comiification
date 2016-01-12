@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="f:\github\comiification\comication\comication\obj\arm\debug\intermediatexaml\comication.exe" HashGuid="7230ff44-18e1-a3bf-efa4-910e1cecd90c" />
+    <LocalAssembly PathName="f:\github\comiification\comication\comication\obj\arm\debug\intermediatexaml\comication.exe" HashGuid="b6805d58-a0a8-e36a-020a-827f0c81a8e2" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
     <ReferenceAssembly PathName="f:\github\comiification\comication\packages\lumiaimagingsdk.2.0.208\lib\wpa81-hidden\arm\lumia.imaging.managed.dll" HashGuid="4995ac95-997b-6a34-dd96-7fb05ef15210" />
     <ReferenceAssembly PathName="f:\github\comiification\comication\packages\lumiaimagingsdk.2.0.208\lib\wpa81\arm\lumia.imaging.winmd" HashGuid="d16e02ff-554c-0883-c15e-9c1ee6c065c5" />

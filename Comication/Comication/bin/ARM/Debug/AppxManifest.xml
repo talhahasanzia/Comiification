@@ -56,118 +56,118 @@
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>Lumia.Imaging.dll</Path>
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.CachingEffect" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.RadialGradient" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.CameraPreviewImageSource" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.GradientImageSource" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.FilterEffect" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.JpegTools" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.ColorImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.DiagnosticsReport" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.AutoResizeConfiguration" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Bitmap" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.CropFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.ImageAligner" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.ReframingFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.FlipFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.ScaleFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.RotationFilter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.GifRenderer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.BufferProviderImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.BufferImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.JpegTools" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.BitmapRenderer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.RandomAccessStreamImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.ColorModeDescriptor" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.ColorImageSource" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.RenderRequest" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.SdkInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.LinearGradient" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.AutoResizeConfiguration" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.DelegatingImageSource" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.EffectGroupAdapter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.CustomImageSourceAdapter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.CustomFilterAdapter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.DelegatingEffect" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.CustomEffectAdapter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.DelegatingFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.WriteableBitmapRenderer" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.ColorModeDescriptor" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.DiagnosticsReport" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.BufferImageSource" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Bitmap" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MonoColorFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.NegativeFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.LomoFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SpotlightFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.StampFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.AntiqueFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.ColorSwapFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.EmbossFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.AnimationFrame" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.PaintFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MoonlightFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SketchFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.OilyFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.VignettingFilter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.FoundationFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.FogFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MagicPenFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.CartoonFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MirrorFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.WatercolorFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.GrayscaleNegativeFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SplitToneFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SolarizeFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SplitToneRange" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.PosterizeFilter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SepiaFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MonoColorFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.FogFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.AntiqueFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.VignettingFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.GrayscaleNegativeFilter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MilkyFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.EmbossFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MoonlightFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.LomoFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.ColorSwapFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SketchFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.PosterizeFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MagicPenFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SolarizeFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.NegativeFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SplitToneRange" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.WarpFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.BitmapProviderImageSource" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.AlphaToGrayscaleFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.BlendEffect" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.ChromaKeyFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.InteractiveForegroundSegmenter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.ImageFusionFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.ObjectExtractor" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.BlendFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.JpegRenderer" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.RandomAccessStreamImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.MirrorFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.StampFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.CartoonFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SplitToneFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.OilyFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.SpotlightFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Artistic.WatercolorFilter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.ImageProviderInfo" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Version" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.FlipFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.ImageAligner" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.RotationFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.CropFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.ScaleFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Transforms.ReframingFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.EllipseRadius" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LensBlurCustomKernel" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.WhiteBalanceFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ContrastFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.Curve" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LevelsFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LensBlurPredefinedKernel" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.VibranceFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.TemperatureAndTintFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.AutoFixAnalyzer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LocalBoostFilter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.DespeckleFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.RgbLevelsFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ColorizationFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.AutoEnhanceFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.GrayscaleFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.SaturationLightnessFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ColorBoostFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LensBlurEffect" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.RgbMixerFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LensBlurFocusEdgeSoftening" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ColorAdjustFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.HueSaturationFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.GaussianNoiseFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.NoiseFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.HueSaturationLightnessFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ArgbColorCurves" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.BlurFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.CurveMinMaxPair" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.CurvesFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.BrightnessFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.SharpnessFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.HdrEffect" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.RedEyeRemovalFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.AutoLevelsFilter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.WhiteboardEnhancementFilter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ExposureFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.AutoEnhanceFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.HueSaturationLightnessFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.RedEyeRemovalFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LocalBoostFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ContrastFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LevelsFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LensBlurEffect" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LensBlurPredefinedKernel" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.CurvesFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.WhiteBalanceFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.GrayscaleFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LensBlurCustomKernel" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LocalBoostAutomaticFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.Curve" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.HueSaturationFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.HdrEffect" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.TemperatureAndTintFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.RgbLevelsFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ColorBoostFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ArgbColorCurves" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.RgbMixerFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.BlurFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.BrightnessFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.VibranceFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.AutoLevelsFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.GaussianNoiseFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ColorAdjustFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.ColorizationFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.CurveMinMaxPair" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.NoiseFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.SaturationLightnessFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.SharpnessFilter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.AutoFixAnalyzer" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.Adjustments.LensBlurFocusEdgeSoftening" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.BufferProviderImageSource" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.BitmapRenderer" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.AnimationFrame" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Lumia.Imaging.BitmapImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.CustomImageSourceAdapter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.CustomEffectAdapter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.DelegatingEffect" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.CustomFilterAdapter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.DelegatingFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.DelegatingImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Custom.EffectGroupAdapter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Lumia.Imaging.StorageFileImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.BitmapImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.EllipseRadius" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.JpegRenderer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.FilterEffect" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.CachingEffect" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Version" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.ImageFusionFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.BlendEffect" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.BlendFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.ChromaKeyFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.InteractiveForegroundSegmenter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.AlphaToGrayscaleFilter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.Compositing.ObjectExtractor" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.CameraPreviewImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.LinearGradient" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.RadialGradient" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.WriteableBitmapRenderer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.GradientImageSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Lumia.Imaging.BitmapProviderImageSource" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
     <Extension Category="windows.activatableClass.inProcessServer">
@@ -181,10 +181,9 @@
     <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1" />
     <build:Item Name="VisualStudio" Version="12.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Express 2013 for Windows" />
-    <build:Item Name="OperatingSystem" Version="10.0.10586.0 (th2_release.151029-1700)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="12.0.40629.0" />
-    <build:Item Name="ProjectGUID" Value="{BA6400B9-2004-4719-B78C-7A658CA932A7}" />
+    <build:Item Name="OperatingSystem" Version="6.3.9600.16384 (winblue_rtm.130821-1623)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="12.0.30501.0" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="12.0.30501.0" />
-    <build:Item Name="MakePri.exe" Version="6.3.9600.17336 (winblue.150226-1500)" />
+    <build:Item Name="MakePri.exe" Version="6.3.9600.17029 (winblue_gdr.140219-1702)" />
   </build:Metadata>
 </Package>
