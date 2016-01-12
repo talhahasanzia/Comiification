@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>MY-PC</Machine>
-    <WindowsUser>sarosh</WindowsUser>
+    <Machine>DESKTOP-06J650J</Machine>
+    <WindowsUser>Me</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|ARM</SolutionConfiguration>
     <PackageArchitecture>arm</PackageArchitecture>
@@ -69,6 +69,90 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Assets\sample.png">
       <PackagePath>Assets\sample.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds1.jpg">
+      <PackagePath>Images\Backgrounds1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds10.jpg">
+      <PackagePath>Images\Backgrounds10.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds11.jpg">
+      <PackagePath>Images\Backgrounds11.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds12.jpg">
+      <PackagePath>Images\Backgrounds12.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds13.jpg">
+      <PackagePath>Images\Backgrounds13.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds14.jpg">
+      <PackagePath>Images\Backgrounds14.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds15.jpg">
+      <PackagePath>Images\Backgrounds15.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds16.jpg">
+      <PackagePath>Images\Backgrounds16.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds17.jpg">
+      <PackagePath>Images\Backgrounds17.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds18.jpg">
+      <PackagePath>Images\Backgrounds18.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds19.jpg">
+      <PackagePath>Images\Backgrounds19.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds2.jpg">
+      <PackagePath>Images\Backgrounds2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds20.jpg">
+      <PackagePath>Images\Backgrounds20.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds21.jpg">
+      <PackagePath>Images\Backgrounds21.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds22.jpg">
+      <PackagePath>Images\Backgrounds22.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds23.jpg">
+      <PackagePath>Images\Backgrounds23.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds24.jpg">
+      <PackagePath>Images\Backgrounds24.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds25.jpg">
+      <PackagePath>Images\Backgrounds25.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds26.jpg">
+      <PackagePath>Images\Backgrounds26.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds27.jpg">
+      <PackagePath>Images\Backgrounds27.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds28.jpg">
+      <PackagePath>Images\Backgrounds28.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds3.jpg">
+      <PackagePath>Images\Backgrounds3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds4.jpg">
+      <PackagePath>Images\Backgrounds4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds5.jpg">
+      <PackagePath>Images\Backgrounds5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds6.jpg">
+      <PackagePath>Images\Backgrounds6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds7.jpg">
+      <PackagePath>Images\Backgrounds7.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds8.jpg">
+      <PackagePath>Images\Backgrounds8.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\Images\Backgrounds9.jpg">
+      <PackagePath>Images\Backgrounds9.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Github\Comiification\Comication\Comication\StoreManifest.xml">
       <PackagePath>StoreManifest.xml</PackagePath>

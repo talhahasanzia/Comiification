@@ -28,6 +28,8 @@ using Lumia.Imaging.Transforms;
 using Lumia.Imaging.Compositing;
 using Windows.UI;
 using Windows.UI.Xaml.Shapes;
+using Windows.UI.Input;
+using Windows.Devices.Input;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
@@ -37,8 +39,18 @@ namespace Comication
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+
+
+
+    
+
     public sealed partial class ComicationView : Page
     {
+       
+
+
+        List<BitmapImage> Backgrounds;
+        int ThumbnailIndex;
         private FilterEffect _effect = null;
         Color BackgroundColor;
         private StorageFile SelectedImageFile;
@@ -53,11 +65,18 @@ namespace Comication
         //
         private WriteableBitmap _cartoonImageBitmap = null;
 
+      
+
+       
+
+
         public ComicationView()
         {
             this.InitializeComponent();
             Step1.Visibility = Visibility.Visible;
             FrontView.Stretch = Stretch.Fill;
+            ThumbnailIndex = 1;
+            
             
         }
 
@@ -107,11 +126,12 @@ namespace Comication
 
 
                     FrontView.Source = selectedImage;
+
+
+                    scrl.Width = FrontView.ActualWidth+5;
+                    scrl.Height = FrontView.ActualHeight+5;
                     
-
-
-
-
+                    ConButton.IsEnabled = true;
                   
 
 
@@ -121,6 +141,7 @@ namespace Comication
                 {
                     // TODO: Write code here to handle picker cancellation.
                 }
+                
             }
         }
 
@@ -184,11 +205,7 @@ namespace Comication
 
 
 
-                BitmapImage BackgroundImage =new BitmapImage() ;
-                BackgroundImage.UriSource=new Uri("ms-appx:///comication.png");
-
-
-                BackView.Source = BackgroundImage;
+               
 
 
                 // Rewind the stream to start. 
@@ -254,6 +271,8 @@ namespace Comication
         {
             try
             {
+               
+
                 // TODO: Add event handler implementation here.
                 if (((ComboBoxItem)ImageModes.SelectedItem).Content.ToString() == "Fill")
                 {
@@ -303,9 +322,135 @@ namespace Comication
             Step2.Visibility = Visibility.Collapsed;
             Step3.Visibility = Visibility.Visible;
             ColorFocus.Visibility = Visibility.Collapsed;
+            InitializeImageArray();
+            Thumbnail.Source = Backgrounds[ThumbnailIndex];
+            Thumbnail.Source = Backgrounds[ThumbnailIndex];
+            BackView.Source = Backgrounds[ThumbnailIndex];
+           
+
         }
 
+        private void Forward_Click(object sender, RoutedEventArgs e)
+        {
+            if (ThumbnailIndex == 27)
+            {
 
+                ThumbnailIndex = 0;
+
+            }
+            else
+            {
+
+                ThumbnailIndex++;
+            
+            }
+            Thumbnail.Source = Backgrounds[ThumbnailIndex];
+            BackView.Source = Backgrounds[ThumbnailIndex];
+        }
+
+        private void BackButton_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            if (ThumbnailIndex == 0)
+            {
+
+                ThumbnailIndex = 27;
+
+            }
+            else
+            {
+
+                ThumbnailIndex--;
+
+            }
+            Thumbnail.Source = Backgrounds[ThumbnailIndex];
+            BackView.Source = Backgrounds[ThumbnailIndex];
+        }
+
+        void InitializeImageArray()
+        {
+
+
+            Backgrounds = new List<BitmapImage>();
+            string[] loc = new string[28];
+            int i = 1;
+
+            for (i = 1; i <= 28; i++)
+            {
+                BitmapImage bi = new BitmapImage();
+                bi.UriSource = new Uri("ms-appx:///Images/Backgrounds" + i + ".jpg");
+
+                Backgrounds.Add(bi);
+            
+            
+            }
+
+            //Backgrounds[i].UriSource = new Uri("ms-appx:///Images/Backgrouds" + i + ".jpg");
+        
+        
+        }
+
+       
+
+        private async void Step2_Button_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundColor = Color.FromArgb(255, (byte)R_Value.Value, (byte)G_Value.Value, (byte)B_Value.Value);
+            ColorOutput.Fill = new SolidColorBrush(BackgroundColor);
+            ColorFocus.Stroke = new SolidColorBrush(BackgroundColor);
+
+            await ApplyChromaFilterAsync();
+        }
+
+        private void Grid_ManipulationCompleted_1(object sender, ManipulationCompletedRoutedEventArgs e)
+        {
+            if (e.PointerDeviceType == PointerDeviceType.Touch)
+            {
+               
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Grid_ManipulationDelta_1(object sender, ManipulationDeltaRoutedEventArgs e)
+        {
+            if (e.PointerDeviceType == PointerDeviceType.Touch)
+            {
+                this.transform.TranslateX += e.Delta.Translation.X;
+                this.transform.TranslateY += e.Delta.Translation.Y;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Grid_ManipulationStarted_1(object sender, ManipulationStartedRoutedEventArgs e)
+        {
+            if (e.PointerDeviceType == PointerDeviceType.Touch)
+            {
+                
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void scrl_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            FrontView.Width = scrl.ViewportWidth;
+            FrontView.Height = scrl.ViewportHeight;
+        }
+
+       
+
+      
 
 
 

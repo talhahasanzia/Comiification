@@ -29,8 +29,18 @@
 
 
         <TextBlock x:Name="Header" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="42" Grid.RowSpan="2" Width="305" Margin="0,0" FontSize="33" Grid.Column="1" FontFamily="Calibri"/>
-        <Image x:Name="FrontView" Grid.Column="1" HorizontalAlignment="Center" Height="Auto" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Stretch="UniformToFill" Canvas.ZIndex="5"/>
-        <Image x:Name="BackView" Grid.Column="1" Height="Auto" Margin="0" Grid.Row="1" Width="Auto" Stretch="None"/>
+        <Grid x:Name="FrontGrid" ManipulationMode="All" ManipulationDelta="Grid_ManipulationDelta_1" Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Canvas.ZIndex="5">
+            <Grid.RenderTransform>
+                <CompositeTransform x:Name="transform" />
+            </Grid.RenderTransform>
+            <ScrollViewer x:Name="scrl" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SizeChanged="scrl_SizeChanged" ZoomMode="Enabled" MinZoomFactor="0.1" Height="Auto" Width="Auto" ManipulationDelta="Grid_ManipulationDelta_1" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.ZIndex="6">
+
+               
+            </ScrollViewer>
+            <Image x:Name="FrontView" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="Auto" Margin="0" Grid.Row="1"  Width="Auto" Stretch="None" Canvas.ZIndex="5" />
+        </Grid>
+
+        <Image x:Name="BackView" Grid.Column="1" Height="Auto" Margin="0" Grid.Row="1" Width="Auto" Stretch="Fill" AllowDrop="True"/>
 
 
 
@@ -47,7 +57,7 @@
             <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="20,10" VerticalAlignment="Stretch" Width="Auto">
 
                 <Button Content="Select" Width="Auto" HorizontalAlignment="Stretch" Margin="0,0" VerticalAlignment="Stretch" BorderThickness="1,1.5" FontFamily="Calibiri" FontWeight="SemiLight" FontSize="28" Height="Auto" Click="Button_Click" Grid.ColumnSpan="2"/>
-                <Button Content="Continue" Click="Button_Click_1" HorizontalAlignment="Stretch" Margin="0,0" VerticalAlignment="Stretch" BorderThickness="1,1.5" FontFamily="Calibri" FontWeight="SemiLight" FontSize="28" Height="Auto" Width="Auto" Grid.ColumnSpan="2"/>
+                <Button x:Name="ConButton" Content="Continue" Click="Button_Click_1" HorizontalAlignment="Stretch" Margin="0,0" VerticalAlignment="Stretch" BorderThickness="1,1.5" FontFamily="Calibri" FontWeight="SemiLight" FontSize="28" Height="Auto" Width="Auto" Grid.ColumnSpan="2" IsEnabled="False"/>
 
             </StackPanel>
             <StackPanel Grid.Column="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" VerticalAlignment="Stretch" Width="Auto">
@@ -86,15 +96,16 @@
             <Slider x:Name="G_Value" Grid.Row="2" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" VerticalAlignment="Stretch" Width="Auto" Maximum="255" Grid.Column="1" Background="Green" ValueChanged="R_Value_ValueChanged"/>
             <Slider x:Name="B_Value" Grid.Row="3" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" VerticalAlignment="Stretch" Width="Auto" Maximum="255" Grid.Column="1" Background="Blue" ValueChanged="R_Value_ValueChanged"/>
             <Rectangle x:Name="ColorOutput" Fill="#FFF4F4F5" Grid.Row="1" HorizontalAlignment="Stretch" Height="Auto"  VerticalAlignment="Stretch" Width="Auto" Margin="10,10,10,10" Grid.RowSpan="3"/>
-            <Button x:Name="Step2_Button" Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Margin="0,0" Grid.Row="1" FontFamily="Calibri" Height="Auto" Width="Auto" Grid.RowSpan="2" Tapped="Button_Tapped" Click="Button_Click_4"/>
-            <Button Content="Continue" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="2" Margin="7,0,7.333,-9" Grid.Row="2" FontFamily="Calibri" Height="Auto" Width="Auto" Grid.RowSpan="2" Tapped="Button_Tapped" Click="Button_Click_3"/>
+            <Button x:Name="Step2_Button" Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Margin="0,0" Grid.Row="1" FontFamily="Calibri" Height="Auto" Width="Auto" Grid.RowSpan="2" Click="Step2_Button_Click" />
+            <Button x:Name="Step3_Button" Content="Continue" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Margin="0,0" Grid.Row="2" FontFamily="Calibri" Height="Auto" Width="Auto" Grid.RowSpan="2"  Click="Button_Click_4"/>
+
 
         </Grid>
 
 
 
 
-        <Grid x:Name="Step3" Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="1.333,0,0,10" Grid.Row="2" VerticalAlignment="Stretch" Width="Auto">
+        <Grid x:Name="Step3" Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="1.333,0,0,10" Grid.Row="2" VerticalAlignment="Stretch" Width="Auto" Canvas.ZIndex="10" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20*"/>
                 <RowDefinition Height="100*"/>
@@ -104,22 +115,23 @@
                 <ColumnDefinition Width="40*"/>
                 <ColumnDefinition Width="30*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock HorizontalAlignment="Stretch" Height="Auto" Width="Auto" Margin="0,0,74.667,108" Grid.RowSpan="2" TextWrapping="Wrap" Text="Select Background Comic Style" VerticalAlignment="Stretch" Grid.ColumnSpan="3" FontSize="19" FontFamily="Calibri"/>
+            <TextBlock HorizontalAlignment="Stretch" Height="Auto" Width="Auto" Margin="0" TextWrapping="Wrap" Text="Select Background" VerticalAlignment="Stretch" Grid.ColumnSpan="2" FontSize="19" FontFamily="Calibri" Canvas.ZIndex="5" SelectionChanged="TextBlock_SelectionChanged" Grid.Column="1"/>
+            <TextBlock HorizontalAlignment="Stretch" Height="Auto" Width="Auto" Margin="0,30,0,0"  TextWrapping="Wrap" Text="Move &amp; resize image by pinching" VerticalAlignment="Top"  FontSize="19" FontFamily="Calibri" Canvas.ZIndex="5" SelectionChanged="TextBlock_SelectionChanged" Grid.Row="1" Foreground="Red"/>
             <Image x:Name="LNaviComic" HorizontalAlignment="Stretch" Height="Auto" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto" Margin="0,0.333,1.167,0"/>
             <Image x:Name="CurrentComic" HorizontalAlignment="Stretch" Height="Auto" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto" Margin="2.833,0.333,0.667,0"/>
-            <Image x:Name="RNaviComic" HorizontalAlignment="Stretch" Height="Auto" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto" Margin="0.333,0.333,-0.333,0"/>
-            <Button Content="Apply" Grid.Column="1"   Margin="146,0,0,-9" VerticalAlignment="Bottom" FontFamily="Calibiri" BorderThickness="1,1.5" Height="58" FontSize="28" Canvas.ZIndex="5" Width="109" FontWeight="SemiLight" Grid.ColumnSpan="2" Grid.Row="1"/>
-            <AppBarButton x:Name="BackButton_Copy" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" Label="" Margin="0" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="1">
+            <Image x:Name="RNaviComic" HorizontalAlignment="Stretch" Height="Auto" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto" Margin="5.333,0.333,-5.333,0"/>
+            <Button Content="Apply" Grid.Column="1"   Margin="146,0,0,-9" VerticalAlignment="Bottom" FontFamily="Calibiri" BorderThickness="1,1.5" Height="58" FontSize="28" Canvas.ZIndex="10" Width="109" FontWeight="SemiLight" Grid.ColumnSpan="2" Grid.Row="1"/>
+            <AppBarButton x:Name="BackButton_Copy" Click="BackButton_Copy_Click" Width="Auto" Height="49" HorizontalAlignment="Stretch" Label="" Margin="0,0,0,-27.333" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Grid.Column="0">
                 <AppBarButton.Icon>
                     <SymbolIcon Margin="0,0" Symbol="Back"/>
                 </AppBarButton.Icon>
             </AppBarButton>
-            <AppBarButton x:Name="BackButton_Copy1" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" Label="" Margin="0.25,0.166,0.25,0.167" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="1">
+            <AppBarButton x:Name="Forward" Width="Auto" Click="Forward_Click" Height="49" HorizontalAlignment="Stretch" Label="" Margin="0.333,0,-0.333,-27.333" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Grid.Row="0" Grid.Column="2">
                 <AppBarButton.Icon>
                     <SymbolIcon Margin="0,0" Symbol="Forward"/>
                 </AppBarButton.Icon>
             </AppBarButton>
-            <Image Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Stretch" Width="Auto"/>
+            <Image x:Name="Thumbnail" Grid.Column="1" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Stretch" Width="Auto" Canvas.ZIndex="4"/>
 
         </Grid>
 
@@ -206,6 +218,8 @@
         </Grid>
         <Ellipse x:Name="ColorFocus" HorizontalAlignment="Stretch" Height="Auto" Margin="50,100" Grid.Row="1" VerticalAlignment="Stretch" Width="Auto" Stroke="Black" StrokeThickness="5" Grid.Column="1" Visibility="Collapsed" Canvas.ZIndex="12"/>
         <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
+
+
 
 
 
